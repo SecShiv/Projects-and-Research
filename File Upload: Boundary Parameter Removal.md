@@ -95,8 +95,7 @@ So ```"if"```, ```"POST"```, ```"submit"``` > Do these checks.
 This is a conditional value, so what if the attacker doesn't add the "submit" parameter in the HTTP request?
 
 My conclusion:
-The request will be sent to the server, but it will skip the first check since the "submit" parameter is not in the POST request, but still execute other parts of the PHP code
-such as ```"if file exists"``` (tested), so that basically bypasses all of its file upload checks in place.
+The request will be sent to the server, but it will skip the first check since the "submit" parameter is not in the POST request, so that basically bypasses all of its file upload checks in place, but still execute other parts of the PHP code such as ```"if file exists"``` (tested).
 
 This is just bad backend coding practices, the security checks are relied directly on the "submit" POST parameter that's sent by the user/attacker.
 Rather, they should do validation which can't be manipulated.
