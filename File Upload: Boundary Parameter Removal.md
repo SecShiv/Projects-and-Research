@@ -87,6 +87,13 @@ if(isset($_POST["submit"])) {
     $msg_type = "alert-success";
     $uploadOk = 1;
   } else {
+
+
+    $msg = "<p>File is not an image.</p>";
+    $msg_type = "alert-warning";
+    $uploadOk = 0;
+  }
+}
 ```
 
 We see that in the backend, that after a POST "submit" request is sent, how the PHP code is handling this, doing the usual file checks.
