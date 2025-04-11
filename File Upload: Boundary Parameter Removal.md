@@ -6,7 +6,7 @@ One of the issues, which was taught in the lectures was a file upload attack usi
 However, I did find another unintended bypass by completely removing the boundary parameter at the bottom, more specifically the ```Content-Disposition: form-data; name="submit"```.
 Removing other boundary parameters weren't successful, only this one for some reason.
 
-What is ```Content-Type: multipart/form-data``` tho? - It's just simple HTML form but for handling large file uploads. The boundary is used to seperate these parameters.
+What is ```Content-Type: multipart/form-data``` tho? - It's just simple HTML form but for handling large file uploads. The boundary is used to seperate parameters.
 Like ```name="submit"``` is just a parameter with a boundary thing on top of it. 
 
 My initial theory was that maybe the server was accepting it as long as it was a POST request, included the ```content-type: multipart/form-data``` and the body as PHP shell code.
