@@ -98,9 +98,9 @@ if(isset($_POST["submit"])) {
 
 We see that in the backend, that after a POST "submit" request is sent, how the PHP code is handling this, doing the usual file checks.
 
-In short, so ```"if"```, ```"POST"```, ```"submit"``` > Do these checks. 
+My logic:, so ```"if"```, ```"POST"```, ```"submit"``` > Do these checks. 
 
-This is a conditional value, so what if the attacker doesn't add the "submit" parameter in the HTTP POST request?
+This is a conditional statement, so what if the attacker doesn't add the "submit" parameter in the HTTP POST request?
 
 My conclusion:
 The request will be sent to the server, but it will skip the first check since the "submit" parameter is not in the POST request, so that basically bypasses all of its file upload checks in place, but still execute other parts of the PHP code such as ```"if file exists"``` (tested).
