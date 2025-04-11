@@ -3,7 +3,7 @@
 So during my 2nd Semester, 1st year in Uni, I and other students were given a practical CTF assignment. During this, I spent 1-2 weeks testing for different stuff, even after I got the flags.
 One of the issues, which was taught in the lectures was a file upload attack using magic bytes to get shell.
 
-However, I did find another unintended bypass by completely removing the boundary parameter at the bottom, more specifically the ```Content-Disposition: form-data; name="submit"```.
+Although, I did find another unintended bypass by completely removing the boundary parameter at the bottom, more specifically the ```Content-Disposition: form-data; name="submit"```.
 Removing other boundary parameters weren't successful, only this one for some reason.
 
 What is ```Content-Type: multipart/form-data``` tho? - It's just simple HTML form but for handling large file uploads. The boundary is used to seperate parameters.
