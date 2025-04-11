@@ -98,7 +98,7 @@ if(isset($_POST["submit"])) {
 
 We see that in the backend, that after a POST "submit" request is sent, how the PHP code is handling this, doing the usual file checks.
 
-My logic:, so ```"if"```, ```"POST"```, ```"submit"``` > Do these checks. 
+My logic: so ```"if"```, ```"POST"```, ```"submit"``` > Do these checks. 
 
 This is a conditional statement, so what if the attacker doesn't add the "submit" parameter in the HTTP POST request?
 
