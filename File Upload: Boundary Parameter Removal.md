@@ -1,4 +1,4 @@
-### Weird File Upload Vector: MultiPart Boundary Parameter Removal (with PoC)
+### Dangerous File Upload Vector: MultiPart Boundary Parameter Removal (with PoC)
 
 So during my 2nd Semester, 1st year in Uni, I and other students were given a practical CTF assignment. During this, I spent 1-2 weeks testing for different stuff, even after I got the flags.
 One of the issues, which was taught in the lectures was a file upload attack using magic bytes to get shell. 
